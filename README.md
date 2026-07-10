@@ -28,3 +28,21 @@ vvp sim
 ```
 
 Expected output:
+```
+PASS: byte 0x55 received correctly
+PASS: byte 0xa3 received correctly
+PASS: byte 0x0 received correctly
+PASS: byte 0xff received correctly
+PASS: byte 0x3c received correctly
+ALL TESTS PASSED (5 bytes)
+```
+
+Alternatively, run it directly in the browser on [EDA Playground](https://www.edaplayground.com/) — paste `uart_tb.v` into the Testbench box and `uart_tx.v` + `uart_rx.v` into the Design box, select Icarus Verilog 12.0 as the simulator, and click Run.
+
+## Files
+
+| File | Description |
+|---|---|
+| `uart_tx.v` | UART transmitter module |
+| `uart_rx.v` | UART receiver module (with input synchronizer) |
+| `uart_tb.v` | Self-checking loopback testbench |
